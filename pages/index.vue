@@ -1,9 +1,12 @@
 <template>
     <div>
+        <h1>
+            <v-toolbar color="blue-grey-darken-4" title="ทะเบียนผู้จำหน่าย"></v-toolbar>
+        </h1>
+        <v-text-field  v-model="search"  label="ค้นหาข้อมูล"></v-text-field>
         <v-btn color="green-darken-3" @click="insert('สร้างข้อมูลผู้จำหน่าย')">เพิ่มข้อมูลผู้จำหน่าย</v-btn>
-        <v-text-field v-model="search"  label="ค้นหาข้อมูล"></v-text-field>
-        <v-btn @click="searchVendor(search)" >  ค้นหา</v-btn>
-        <v-btn @click="clear()" >  เคลียร์</v-btn>
+        <v-btn color="grey-darken-4" @click="searchVendor(search)" >ค้นหา</v-btn>
+        <v-btn color="grey-darken-4" @click="clear()" >เคลียร์</v-btn>
         <v-table>
             <thead>
                 <tr>
